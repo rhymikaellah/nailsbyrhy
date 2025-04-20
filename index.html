@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Nail Salon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  
+  <div class="title-banner">Nails by Rhy</div>
+
+  <div class="container">
+    <div class="sidebar">
+      <h1>FIRST-COME, FIRST-SERVE POLICY!</h1>
+      <div class="menu">
+        <button onclick="showTab('home')"> Home</button>
+        <button onclick="showTab('designs')">Show Nail Designs</button>
+        <button onclick="showTab('addCustomer')"> Add Walk-in Customer</button>
+        <button onclick="showTab('queue')">Show Customer Queue</button>
+        <button onclick="showTab('receipts')">Show Printed Receipts</button>
+        <button onclick="showTab('exit')">Exit</button>
+      </div>
+    </div>
+
+    <div class="content">
+      <div id="home" class="tab">
+        <h2>Welcome!</h2>
+        <p>At Nails by Rhy, our First-Come, First-Served (FCFS) policy guarantees a smooth and hassle-free experience. Whether you're coming in for a quick manicure or an eye-catching nail art design, we have a wide range of styles to match your unique taste.</p>
+        <p> Drop by for a walk-in appointment, explore our beautiful nail art selections, and let us treat you to a relaxing and pampering session. We can’t wait to make your nails look absolutely stunning!</p>
+      </div>
+
+      <div id="designs" class="tab">
+        <h2>Nail Designs</h2>
+        <ul id="nail-designs"></ul>
+      </div>
+
+      <div id="addCustomer" class="tab">
+        <h2>Add Walk-in Customer</h2>
+        <input type="text" id="customer-name" placeholder="Customer Name" />
+        <br>
+        <select id="design-choice"></select>
+        <br>
+        <button onclick="addCustomer()">Add and Print Receipt</button>
+        <div id="receipt-output"></div>
+      </div>
+
+      <div id="queue" class="tab">
+        <h2>Walk-in Customer Queue</h2>
+        <ul id="customer-queue"></ul>
+      </div>
+
+      <div id="receipts" class="tab">
+        <h2>Printed Receipts</h2>
+        <div id="receipts-output"></div>
+      </div>
+
+      <div id="exit" class="tab">
+        <h2>Thank you!</h2>
+        <p>Thank you for using NAILS BY RHY Salon System. </p>
+        <p> See you next time! 👋</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
